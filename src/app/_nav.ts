@@ -38,22 +38,27 @@ export const navItems = [
     children: [
       {
         name: 'Học viên tiềm năng',
-        url: '/base/app-potential-student',
+        url: '/base/potentialStudent/list',
         icon: 'icon-puzzle'
       },
       {
         name: 'Học viên',
-        url: '/base/app-student',
+        url: '/base/student/list',
         icon: 'icon-puzzle'
       },
       {
         name: 'Giảng viên',
-        url: '/base/app-lecturer',
+        url: '/base/lecturer/list',
         icon: 'icon-puzzle'
       },
       {
         name: 'Khóa học',
-        url: '/base/app-course',
+        url: '/base/course/list',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Danh mục khóa học',
+        url: '/base/courseCategory/list',
         icon: 'icon-puzzle'
       },
       {

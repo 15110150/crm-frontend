@@ -3,25 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-import { CourseComponent } from './course/course.component';
-
-// Forms Component
-import { CourseCategoryComponent } from './course-category/course-category.component';
-
-import { LectureComponent } from './lecture/lecture.component';
-import { PotentialStudentComponent } from './potential-student/potential-student.component';
-import { StudentComponent } from './student/student.component';
-
 import { SwitchesComponent } from './switches.component';
 import { TablesComponent } from './tables.component';
 
 // Tabs Component
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TabsComponent } from './tabs.component';
-
-// Carousel Component
-
-// Collapse Component
 
 // Dropdowns Component
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -56,21 +43,16 @@ import { BaseRoutingModule } from './base-routing.module';
     PaginationModule.forRoot(),
     PopoverModule.forRoot(),
     ProgressbarModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
   ],
   declarations: [
-    CourseComponent,
-    CourseCategoryComponent,
     SwitchesComponent,
     TablesComponent,
     TabsComponent,
-    LectureComponent,
-    StudentComponent,
-    PotentialStudentComponent,
     PaginationsComponent,
     PopoversComponent,
     ProgressComponent,
-    TooltipsComponent
+    TooltipsComponent,
   ]
 })
 export class BaseModule { }

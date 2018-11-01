@@ -24,14 +24,7 @@ export class DetailCampaignComponent {
     this.entries.push({
       header: 'header',
       content: 'content'
-    },
-    {
-      header: 'header',
-      content: 'content'
-    },
-    { header: 'header',
-    content: 'content'}
-    )
+    })
   }
 
   removeEntry() {

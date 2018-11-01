@@ -1,11 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CourseComponent } from './course/course.component';
-import { CourseCategoryComponent } from './course-category/course-category.component';
-import { LectureComponent } from './lecture/lecture.component';
-import { PotentialStudentComponent } from './potential-student/potential-student.component';
-import { StudentComponent } from './student/student.component';
 import { PaginationsComponent } from './paginations.component';
 import {PopoversComponent} from './popovers.component';
 import {ProgressComponent} from './progress.component';
@@ -19,39 +14,64 @@ const routes: Routes = [
     },
     children: [
       {
-        path: 'app-potential-student',
-        component: PotentialStudentComponent,
+        path: '',
         data: {
           title: 'Quản lí học viên tiềm năng'
-        }
+        },
+        children: [
+          {
+            path: 'potentialStudent',
+            loadChildren: './potentialStudent/potentialStudent.module#PotentialStudentModule'
+          },
+        ]
       },
       {
-        path: 'app-student',
-        component: StudentComponent,
+        path: '',
         data: {
           title: 'Quản lý học viên'
-        }
+        },
+        children: [
+          {
+            path: 'student',
+            loadChildren: './student/student.module#StudentModule'
+          },
+        ]
       },
       {
-        path: 'app-lecturer',
-        component: LectureComponent,
+        path: '',
         data: {
           title: 'Quản lý giảng viên'
-        }
+        },
+        children: [
+          {
+            path: 'lecturer',
+            loadChildren: './lecture/lecturer.module#LecturerModule'
+          },
+        ]
       },
       {
-        path: 'app-course',
-        component: CourseComponent,
+        path: '',
         data: {
           title: 'Quản lý khóa học'
-        }
+        },
+        children: [
+          {
+            path: 'course',
+            loadChildren: './course/course.module#CourseModule'
+          },
+        ]
       },
       {
-        path: 'app-course-category',
-        component: CourseCategoryComponent,
+        path: '',
         data: {
           title: 'Quản lí loại khóa học'
-        }
+        },
+        children: [
+          {
+            path: 'courseCategory',
+            loadChildren: './courseCategory/courseCategory.module#CourseCategoryModule'
+          },
+        ]
       },
       {
         path: 'paginations',
